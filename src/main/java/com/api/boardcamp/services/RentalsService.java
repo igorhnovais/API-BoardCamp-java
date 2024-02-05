@@ -2,6 +2,7 @@ package com.api.boardcamp.services;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -63,5 +64,9 @@ public class RentalsService {
 
 
         return rentalRepository.save(new RentalsModel(dto, data, priceTotal, customer, game));
+    }
+
+    public List<RentalsModel> findAllRentals(){
+        return rentalRepository.findAll();
     }
 }
