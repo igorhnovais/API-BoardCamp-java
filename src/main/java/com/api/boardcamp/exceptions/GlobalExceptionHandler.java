@@ -19,7 +19,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler({UnprocessableEntityException.class})
-    public ResponseEntity<Object> unprocessablEntity(NotFoundException exception) {
+    public ResponseEntity<Object> unprocessableEntity(UnprocessableEntityException exception) {
         return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(exception.getMessage());
     }
 }
