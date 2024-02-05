@@ -53,7 +53,7 @@ public class RentalsModel {
     @Column(nullable = false)
     private int daysRented;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String returnDate;
 
     @Column(nullable = false)
