@@ -24,12 +24,6 @@ public class RentalsModel {
     private Long id;
 
     @Column(nullable = false)
-    private Number customerId;
-
-    @Column(nullable = false)
-    private Number GameId;
-
-    @Column(nullable = false)
     private String rentDate;
 
     @Column(nullable = false)
