@@ -1,5 +1,7 @@
 package com.api.boardcamp.models;
 
+import com.api.boardcamp.dtos.GameDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,6 +19,14 @@ import lombok.NoArgsConstructor;
 @Table(name = "games")
 
 public class GameModel {
+
+    public GameModel(GameDTO dto){
+        this.name = dto.getName();
+        this.image = dto.getImage();
+        this.stockTotal = dto.getStockTotal();
+        this.pricePerDay = dto.getPricePerDay();
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
