@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,5 +37,11 @@ public class RentalController {
     @GetMapping
     public List<RentalsModel> getRentals(){
         return rentalsService.findAllRentals();
+    }
+
+    @PutMapping("/{id}/return")
+    public ResponseEntity<Object> putRental(@PathVariable Long id){
+        RentalsModel model = rentalsService.updateRental(id);
+        return ResponseEntity.status(HttpStatus.OK).body(model);
     }
 }
