@@ -1,5 +1,7 @@
 package com.api.boardcamp.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.api.boardcamp.dtos.GameDTO;
@@ -24,5 +26,9 @@ public class GameService {
 
         GameModel game = new GameModel(dto);
         return gameRepository.save(game);
+    }
+
+    public List<GameModel> findAllGames() {
+        return gameRepository.findAll();
     }
 }
