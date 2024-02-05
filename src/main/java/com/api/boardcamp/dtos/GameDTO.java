@@ -16,9 +16,9 @@ public class GameDTO {
 
     @NotNull(message = "Quantity in stock is required")
     @Positive(message = "You must have at least one in stock")
-    private Number stockTotal;
+    private Integer stockTotal;
 
     @NotNull(message = "Price per day is required")
     @Positive(message = "The price cannot be zero or negative")
-    private Number pricePerDay;
+    private Integer pricePerDay;
 }

@@ -27,6 +27,14 @@ public class GameModel {
         this.pricePerDay = dto.getPricePerDay();
     }
 
+    public GameModel(GameModel dto, int newStock){
+        this.id = dto.getId();
+        this.name = dto.getName();
+        this.image = dto.getImage();
+        this.stockTotal = newStock;
+        this.pricePerDay = dto.getPricePerDay();
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -38,8 +46,8 @@ public class GameModel {
     private String image;
 
     @Column(nullable = false)
-    private Number stockTotal;
+    private int stockTotal;
 
     @Column(nullable = false)
-    private Number pricePerDay;
+    private int pricePerDay;
 }
