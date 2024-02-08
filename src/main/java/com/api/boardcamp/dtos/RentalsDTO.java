@@ -2,9 +2,11 @@ package com.api.boardcamp.dtos;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class RentalsDTO {
     @NotNull(message = "Id user per day is required")
     @Positive(message = "Id user cannot be negative or zero")
