@@ -14,7 +14,7 @@
 ### tecnologias e ferramentas
 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Java](https://img.shields.io/badge/java-%yellow.svg?style=for-the-badge&logo=Java&logoColor=%23F7DF1E)
+![Java](https://img.shields.io/badge/java-%yellow.svg?style=for-the-badge&logo=java&logoColor=%23F7DF1E)
 ![SpringBoot](https://img.shields.io/badge/springboot-green.svg?style=for-the-badge&logo=springboot&logoColor=white)
 ![PostegresSql](https://img.shields.io/badge/postegresql-%23007ACC.svg?style=for-the-badge&logo=postegresql&logoColor=white)
 
